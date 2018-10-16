@@ -1,0 +1,13 @@
+<h2>Teaspoon to wacky unit converter</h2>
+
+<form>
+  <label for="teaspoons">How many teaspoons do you have?
+    <input type="number" #teaspoons>
+  </label>
+  <button (click)="hectoConvert(teaspoons.value)">Figure it out!</button>
+</form>
+
+<div class="output">
+  <h3>Hectaliters: {{value}}</h3>
+  <h3>Novemdeciliters: {{value}}</h3>
+</div>

@@ -1,0 +1,31 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<h2>Here are some recipes to help you eat: </h2>
+<ul>
+  <!-- <li *ngFor="let recipe of recipes">{{recipe.title}}</li> -->
+  <li *ngFor="let recipe of recipes" class="no-bullet"><h3>{{recipe.title}}</h3>
+    <ul>
+      <!-- <li></li> -->
+      <li>Description: {{recipe.description}}</li>
+      <li>Ingredients:
+        <ul>
+          <li *ngFor="let ingredient of recipe.ingredients">{{ingredient}}</li>
+        </ul>
+      </li>
+      <li>Directions:
+        <ul>
+          <li *ngFor="let direction of recipe.directions">{{direction}}</li>
+        </ul>
+      </li>
+      <li>Serves: {{recipe.servings}}</li>
+      <li>Dietary Restrictions: {{recipe.dietaryRestrictions}}</li>
+      <li>Cook Time: {{recipe.cookTime[0]}} hours, {{recipe.cookTime[1]}} minutes</li>
+    </ul>
+  </li>
+</ul>
+
+<app-converter></app-converter>
